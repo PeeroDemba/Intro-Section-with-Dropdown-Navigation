@@ -1,0 +1,822 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  background-color: hsl(0, 0%, 98%);
+  font-family: "Epilogue", sans-serif;
+}
+
+.hide {
+  display: none;
+}
+
+header {
+  height: 5rem;
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 4rem;
+  width: 100%;
+  padding: 1.5rem 0rem 1.5rem 4rem;
+}
+
+#menu {
+  display: none;
+}
+
+.logo {
+  padding-top: 0rem;
+  width: 7rem;
+  height: 1.5rem;
+}
+
+.combine {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  justify-content: space-between;
+
+  a {
+    color: rgba($color: black, $alpha: 0.7);
+    text-decoration: none;
+  }
+}
+
+ul {
+  list-style-type: none;
+}
+
+.lidownfirst {
+  margin-left: -4.5rem;
+  border: 0.5px solid #ddd;
+  width: 10rem;
+  height: 10.5rem;
+  text-align: center;
+  background-color: white;
+  border-radius: 0.5rem;
+  padding: 1rem 0;
+
+  img {
+    display: inline-block;
+    width: 15%;
+  }
+
+  a {
+    display: inline-block;
+    text-align: left;
+    width: 80%;
+  }
+
+  & > li {
+    display: flex;
+    align-items: center;
+    width: 10rem;
+    gap: 1rem;
+  }
+}
+
+.lidownsecond {
+  width: 7.5rem;
+  border: 0.5px solid #ddd;
+  height: 8rem;
+  background-color: white;
+  border-radius: 0.5rem;
+  padding: 1rem 0;
+  font-size: 0.9rem;
+}
+
+.first {
+  display: inline-block;
+
+  & > ul {
+    position: relative;
+
+    & > li {
+      display: inline-block;
+      width: 7rem;
+      color: rgba($color: black, $alpha: 0.7);
+
+      &:hover {
+        cursor: pointer;
+        color: black;
+
+        & a:hover {
+          cursor: pointer;
+          color: black;
+        }
+      }
+    }
+  }
+}
+
+.first li.features {
+  display: inline-block;
+  width: 7rem;
+  color: rgba($color: black, $alpha: 0.7);
+
+  & > img {
+    display: inline-block;
+    margin-left: 0.5rem;
+  }
+
+  &:hover {
+    cursor: pointer;
+    color: black;
+
+    & a:hover {
+      cursor: pointer;
+      color: black;
+    }
+
+    & > img {
+      transform: rotate(180deg);
+    }
+  }
+
+  & > ul > li {
+    display: none;
+  }
+
+  & > ul {
+    display: none;
+  }
+
+  &:hover > ul {
+    display: block;
+  }
+
+  &:hover > ul > li {
+    display: flex;
+
+    & a:hover {
+      cursor: pointer;
+      color: black;
+    }
+  }
+
+  & > ul {
+    position: absolute;
+    top: 150%;
+
+    & > li {
+      padding: 0.5rem 1.5rem;
+    }
+  }
+}
+
+.first li.company {
+  display: inline-block;
+  width: 7rem;
+  color: rgba($color: black, $alpha: 0.7);
+
+  & img {
+    display: inline-block;
+    margin-left: 0.5rem;
+  }
+
+  &:hover {
+    cursor: pointer;
+    color: black;
+
+    & a:hover {
+      cursor: pointer;
+      color: black;
+    }
+
+    & > img {
+      transform: rotate(180deg);
+    }
+  }
+
+  & > ul > li {
+    display: none;
+  }
+
+  & > ul {
+    display: none;
+  }
+
+  &:hover > ul {
+    display: block;
+  }
+
+  &:hover > ul > li {
+    display: block;
+
+    & a:hover {
+      cursor: pointer;
+      color: black;
+    }
+  }
+
+  & > ul {
+    position: absolute;
+    top: 150%;
+
+    & > li {
+      padding: 0.5rem 1.5rem;
+    }
+  }
+}
+
+.second {
+  & a {
+    display: inline-block;
+
+    &:first-child {
+      width: 5rem;
+
+      &:hover {
+        color: black;
+      }
+    }
+
+    &:last-child {
+      border: 1px solid rgba($color: black, $alpha: 0.7);
+      text-align: center;
+      padding: 0.5rem 1rem;
+      border-radius: 0.5rem;
+
+      &:hover {
+        color: black;
+        border: 1px solid black;
+      }
+    }
+  }
+}
+
+main {
+  display: flex;
+  padding: 0 8rem;
+  gap: 5rem;
+  min-height: 90vh;
+  margin-bottom: 5rem;
+  align-items: center;
+
+  .card1 {
+    width: 50%;
+
+    & h1 {
+      font-size: 5.5rem;
+      line-height: 6rem;
+    }
+
+    & p {
+      font-size: 1.5rem;
+      line-height: 2rem;
+      color: rgba($color: black, $alpha: 0.7);
+      margin: 3rem 0;
+    }
+
+    & a {
+      text-align: center;
+      display: inline-block;
+      width: 12rem;
+      height: 4rem;
+      font-size: 1.5rem;
+      padding: 1.3rem 1.5rem;
+      border-radius: 1rem;
+      text-decoration: none;
+      background-color: black;
+      color: white;
+
+      &:hover {
+        color: black;
+        background-color: white;
+        border: 1px solid rgba($color: black, $alpha: 0.7);
+      }
+    }
+
+    & .images {
+      margin-top: 6rem;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2rem;
+      justify-content: flex-start;
+
+      & img {
+        width: 6.5rem;
+        height: 1.5rem;
+
+        &:nth-child(2) {
+          width: 5rem;
+          height: 2.5rem;
+        }
+
+        &:nth-child(4) {
+          width: 6rem;
+          height: 2rem;
+        }
+      }
+    }
+  }
+
+  .card2 {
+    width: 50%;
+
+    img {
+      width: 100%;
+    }
+  }
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+@media (max-width: 1279px) {
+  main {
+    display: flex;
+    padding: 0 4rem;
+    gap: 2.5rem;
+    min-height: 90vh;
+    margin-bottom: 5rem;
+    align-items: center;
+
+    .card1 {
+      width: 50%;
+
+      & h1 {
+        font-size: 5rem;
+        line-height: 5.5rem;
+      }
+
+      & p {
+        font-size: 1.4rem;
+        line-height: 2rem;
+      }
+
+      & a {
+        font-size: 1.4rem;
+        padding: 1.3rem 1.5rem;
+      }
+    }
+  }
+}
+
+@media (max-width: 1023px) {
+  header {
+    height: 5rem;
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    width: 100%;
+    padding: 1.5rem 0rem 1.5rem 1.5rem;
+  }
+
+  .first {
+    width: 70%;
+
+    & > ul {
+      position: relative;
+
+      & > li {
+        display: inline-block;
+        width: 5.5rem;
+      }
+    }
+  }
+
+  .second {
+    width: 30%;
+  }
+
+  main {
+    display: flex;
+    padding: 0 4rem;
+    gap: 2.5rem;
+    min-height: 90vh;
+    margin-bottom: 5rem;
+    align-items: center;
+
+    .card1 {
+      width: 50%;
+
+      & h1 {
+        font-size: 4.5rem;
+        line-height: 5rem;
+      }
+
+      & p {
+        font-size: 1.3rem;
+        line-height: 1.8rem;
+      }
+
+      & a {
+        font-size: 1.3rem;
+        padding: 1.4rem 1.5rem;
+      }
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  body {
+    min-height: 100vh;
+    background-color: hsl(0, 0%, 98%);
+    position: relative;
+  }
+
+  header {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding: 1.5rem 0rem 1.5rem 2rem;
+  }
+
+  a {
+    color: rgba($color: black, $alpha: 0.7);
+    text-decoration: none;
+  }
+
+  #menu {
+    display: block;
+    width: 2rem;
+  }
+
+  .menu {
+    padding: 1.5rem 2rem;
+  }
+
+  .menuclose {
+    padding: 1.5rem 2rem;
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  .combine {
+    display: flex;
+    border: 1px solid black;
+    width: 100%;
+    justify-content: space-between;
+    display: none;
+
+    a {
+      color: rgba($color: black, $alpha: 0.7);
+      text-decoration: none;
+    }
+  }
+
+  ul {
+    list-style-type: none;
+  }
+
+  .first {
+    display: block;
+    padding: 1.5rem 2rem;
+
+    & > ul {
+      position: relative;
+
+      & > li {
+        display: block;
+        width: 6rem;
+        color: rgba($color: black, $alpha: 0.7);
+        margin-bottom: 2rem;
+
+        &:hover {
+          cursor: pointer;
+          color: black;
+
+          & a:hover {
+            cursor: pointer;
+            color: black;
+          }
+
+          & > img {
+            transform: rotate(180deg);
+          }
+        }
+      }
+    }
+  }
+
+  .first li.features {
+    display: block;
+    width: 7rem;
+    color: rgba($color: black, $alpha: 0.7);
+    margin-bottom: 2rem;
+
+    &:hover {
+      cursor: pointer;
+      color: black;
+
+      & a:hover {
+        cursor: pointer;
+        color: black;
+      }
+
+      & > img {
+        transform: rotate(180deg);
+      }
+    }
+
+    & > ul > li {
+      display: none;
+    }
+
+    & > ul {
+      display: none;
+    }
+
+    &:hover > ul {
+      display: block;
+    }
+
+    &:hover > ul > li {
+      display: flex;
+
+      & a:hover {
+        cursor: pointer;
+        color: black;
+      }
+    }
+
+    & > ul {
+      position: relative;
+      top: 0;
+
+      & > li {
+        padding: 0.3rem 0;
+      }
+    }
+  }
+
+  .first li.company {
+    display: block;
+    width: 7.5rem;
+    color: rgba($color: black, $alpha: 0.7);
+    margin-bottom: 2rem;
+
+    &:hover {
+      cursor: pointer;
+      color: black;
+
+      & a:hover {
+        cursor: pointer;
+        color: black;
+      }
+
+      & > img {
+        transform: rotate(180deg);
+      }
+    }
+
+    & > ul > li {
+      display: none;
+    }
+
+    & > ul {
+      display: none;
+    }
+
+    &:hover > ul {
+      display: block;
+    }
+
+    &:hover > ul > li {
+      display: block;
+
+      & a:hover {
+        cursor: pointer;
+        color: black;
+      }
+    }
+
+    & > ul {
+      position: relative;
+      top: 0;
+
+      & > li {
+        padding: 0.3rem 0;
+      }
+    }
+  }
+
+  .second {
+    padding: 1rem 2rem;
+    width: 100%;
+
+    & a {
+      display: block;
+      text-decoration: none;
+
+      &:first-child {
+        width: 100%;
+        text-align: center;
+        margin-bottom: 2rem;
+
+        &:hover {
+          color: black;
+        }
+      }
+
+      &:last-child {
+        border: 1px solid rgba($color: black, $alpha: 0.7);
+        text-align: center;
+        padding: 0.5rem 1rem;
+        border-radius: 0.5rem;
+
+        &:hover {
+          color: black;
+          border: 1px solid black;
+        }
+      }
+    }
+  }
+
+  .lidwnfirst {
+    margin-left: 0rem;
+    width: 11.5rem;
+    text-align: center;
+    background-color: white;
+    border-radius: 0.5rem;
+    padding: 1rem 2rem;
+
+    img {
+      display: inline-block;
+      width: 15%;
+    }
+
+    a {
+      display: inline-block;
+      text-align: left;
+      width: 80%;
+    }
+
+    & > li {
+      display: flex;
+      align-items: center;
+      width: 10rem;
+      margin: 0.5rem 0;
+      gap: 1rem;
+    }
+  }
+
+  .lidwnsecond {
+    width: 10rem;
+    background-color: white;
+    border-radius: 0.5rem;
+    padding: 1rem 2rem;
+
+    & > li {
+      margin: 0.5rem 0;
+    }
+  }
+
+  main {
+    display: flex;
+    flex-direction: column;
+    padding: 0 0;
+    gap: 5rem;
+    min-height: 90vh;
+    margin-bottom: 5rem;
+    align-items: center;
+
+    .card1 {
+      width: 100%;
+      order: 2;
+      padding: 0 2rem;
+      text-align: center;
+
+      & h1 {
+        font-size: 4.5rem;
+        line-height: 5rem;
+      }
+
+      & p {
+        font-size: 1.5rem;
+        line-height: 2rem;
+        color: rgba($color: black, $alpha: 0.7);
+        margin: 3rem 0;
+      }
+
+      & a {
+        text-align: center;
+        display: inline-block;
+        width: 12rem;
+        height: 4rem;
+        font-size: 1.5rem;
+        padding: 1.25rem 1.5rem;
+        border-radius: 1rem;
+        text-decoration: none;
+        background-color: black;
+        color: white;
+
+        &:hover {
+          color: black;
+          background-color: white;
+          border: 1px solid rgba($color: black, $alpha: 0.7);
+        }
+      }
+
+      & .images {
+        margin-top: 6rem;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 2rem;
+        justify-content: center;
+
+        & img {
+          width: 6.5rem;
+          height: 1.5rem;
+
+          &:nth-child(2) {
+            width: 5rem;
+            height: 2.5rem;
+          }
+
+          &:nth-child(4) {
+            width: 6rem;
+            height: 2rem;
+          }
+        }
+      }
+    }
+
+    .card2 {
+      width: 100%;
+      order: 1;
+
+      img {
+        width: 100%;
+      }
+    }
+  }
+
+  .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba($color: black, $alpha: 0.7);
+  }
+
+  .show {
+    display: block;
+    height: 100%;
+    width: 70vw;
+    position: absolute;
+    top: 0;
+    left: 30%;
+    background-color: white;
+  }
+
+  .shw {
+    display: block;
+  }
+
+  .hide {
+    display: none;
+  }
+}
+
+@media (max-width: 500px) {
+  main {
+    display: flex;
+    flex-direction: column;
+    padding: 0 0;
+    gap: 5rem;
+    min-height: 90vh;
+    margin-bottom: 5rem;
+    align-items: center;
+
+    .card1 {
+      width: 100%;
+      order: 2;
+      padding: 0 1.5rem;
+      text-align: center;
+
+      & h1 {
+        font-size: 2.8rem;
+        line-height: 3.3rem;
+      }
+
+      & p {
+        font-size: 1.2rem;
+        line-height: 1.7rem;
+        color: rgba($color: black, $alpha: 0.7);
+        margin: 3rem 0;
+      }
+
+      & a {
+        text-align: center;
+        display: inline-block;
+        width: 10rem;
+        height: 4rem;
+        font-size: 1.2rem;
+        padding: 1.5rem 1.5rem;
+      }
+    }
+  }
+}
